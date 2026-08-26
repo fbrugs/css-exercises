@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 img {
@@ -23,4 +24,23 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+/* changes */
+
+.title {
+  margin-bottom: 32px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.plant {
+  max-width: 200px;
+  /*display: flex;          Commented is not needed, text + image align itself from inheritance
+  flex-direction: column;   by body selector ( text-align:center )
+  align-items: center;*/
 }
