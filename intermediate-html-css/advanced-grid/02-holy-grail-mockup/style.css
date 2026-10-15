@@ -89,3 +89,92 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+/* /////////////////////////////////////////////// */
+/* 
+### Self Check
+- The container element has two columns                                           FINISHED:
+- The container's second column is 4 times as large as the first column           FINISHED:
+- The container element has a gap of 4px                                          FINISHED:
+- The header element has two columns                                              FINISHED:
+- The `ul` inside the menu element contains another grid                          FINISHED:
+- The `ul` inside the nav element contains another grid                           FINISHED:
+- The sidebar element has a gap of 50px                                           FINISHED:
+- The text elements in the sidebar are centered with grid
+- The article element should set grid columns using `repeat` along with the `auto-fit` and `minmax` properties FINISHED:
+- The article columns should have a minimum value of 250px and a maximum of 1fr unit  FINISHED:
+- The article element has a gap of 15px                                           FINISHED:
+- The card elements inside the article container have a height of 200px           FINISHED:
+- The header and footer span across both columns                                  FINISHED:
+- The sidebar only spans across the first column                                  FINISHED:
+- The nav and article elements only span across the second column                 FINISHED:
+*/
+
+/* FINISHED: */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+
+/* FINISHED: */
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* FINISHED: */
+.header {
+  grid-column: 1/span 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* FINISHED: */
+.header .menu > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* FINISHED: */
+.logo {
+  justify-self: start;
+}
+
+/* FINISHED: */
+.sidebar {
+  grid-row: 2/span 2;
+  display: grid;
+  gap: 50px
+}
+
+/* FINISHED: */
+.footer {
+  grid-column: 1/span 2;
+}
+
+/* FINISHED: */
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* FINISHED: */
+.article .card {
+  height: 200px;
+}
+
+/* FINISHED: */
+.side-content,
+.photo {
+  display: grid;
+  align-items: center;
+}
+
+/* FINISHED: */
+.menu {
+  align-self: center;
+}
+
